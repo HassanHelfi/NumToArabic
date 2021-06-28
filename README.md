@@ -7,8 +7,8 @@ Convert numbers to Arabic words in PHP
 Use string data type to use numbers.
 ```php
 <?php
-    include('number2WordArabicF.php');
-    $number_class = new Arabic2Word;
+    include('Number2ArabicWord.php');
+    $number_class = new Number2WordArabic;
 ?>
 ```
 ### Example
