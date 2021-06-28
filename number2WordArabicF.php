@@ -1,6 +1,6 @@
 <?php
 
-class Arabic2Word
+class Number2WordArabic
 {
     protected $digit = [
         ['صفر', 'وا حد', 'إثنان', 'ثلاثة', 'أربعة', 'خمسة', 'ستّة', 'سبعة', 'ثمانية', 'تعسة'],
@@ -31,9 +31,9 @@ class Arabic2Word
     {
         $groups = $this->format($number);
         $groups_count = count($groups);
-        if ($groups_count == 1) return $this->one($groups);#<2
+        if ($groups_count == 1) return $this->one($groups);
         elseif ($groups_count <= 12) return $this->other($groups);
-        else return "Asd";
+        else return "...";
     }
 
     /**

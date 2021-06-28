@@ -4,7 +4,7 @@ Convert numbers to Arabic words in PHP
 
 ## Usage
 
-Use the string data type to use numbers.
+Use string data type to use numbers.
 ```php
 <?php
     include('number2WordArabicF.php');
@@ -20,4 +20,6 @@ Use the string data type to use numbers.
 ?>
 ```
 ## تحويل الأرقام إلى ما يقابلها كتابة بالعربية
+
+استخدم السلاسل النصية عند استعمال ألارقام
 
