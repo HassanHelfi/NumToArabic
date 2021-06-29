@@ -15,7 +15,7 @@ class Number2WordArabic
      * @param string $number
      * @return array
      */
-    public function format(string $number): array #int or string
+    public function format(string $number): array
     {
         $number = explode('.', str_replace(' ', '', $number));
         $number[0] = str_split(strrev($number[0]), 3);
@@ -47,7 +47,7 @@ class Number2WordArabic
             $num_count = strlen($num);
             $other_array = $groups;
             array_pop($other_array);
-            $other_number = (string)str_replace(',', '', implode(',', array_reverse($other_array)));#int or string
+            $other_number = (string)str_replace(',', '', implode(',', array_reverse($other_array)));
             list($groups, $part) = $this->part($groups, $i);
             $and = ($groups[$i - 1] == 0) ? '' : $this->digit[5][4];
             $other = ($other_number == 0) ? '' : $and . $this->number2Word($other_number);
@@ -75,15 +75,15 @@ class Number2WordArabic
         if ($num_count == 1) {
             $num2word = $this->digit[0][$num]; #0-9
         } elseif ($num_count == 2) {
-            if ($num_arr[1] == 0 && $num_arr[0] > 0) $num2word = $this->digit[2][$num_arr[0] - 1]; #10-90
-            if ($num_arr[1] > 0 && $num_arr[0] == 1) $num2word = $this->digit[1][$num_arr[1] - 1]; #11-19
-            if ($num_arr[1] > 0 && $num_arr[0] > 1) $num2word = $this->digit[0][$num_arr[1]] . $this->digit[5][4] . $this->digit[2][$num_arr[0] - 1]; #21-99
+            if ($num_arr[1] == 0 && $num_arr[0] > 0) $num2word = $this->digit[2][$num_arr[0] - 1];
+            if ($num_arr[1] > 0 && $num_arr[0] == 1) $num2word = $this->digit[1][$num_arr[1] - 1];
+            if ($num_arr[1] > 0 && $num_arr[0] > 1) $num2word = $this->digit[0][$num_arr[1]] . $this->digit[5][4] . $this->digit[2][$num_arr[0] - 1];
         }
         if ($num_count == 3) {
             if ($num_arr[0] > 0 && $num_arr[1] == 0 && $num_arr[2] == 0) {
-                $num2word = $this->digit[3][$num_arr[0] - 1]; #100-200
+                $num2word = $this->digit[3][$num_arr[0] - 1]; 
             } else {
-                $num2word = $this->digit[3][$num_arr[0] - 1] . $this->digit[5][4] . $this->one([$num_arr[1] . $num_arr[2]]); #100-999
+                $num2word = $this->digit[3][$num_arr[0] - 1] . $this->digit[5][4] . $this->one([$num_arr[1] . $num_arr[2]]);
             }
         }
         return $num2word;
