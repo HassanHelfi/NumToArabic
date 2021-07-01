@@ -15,7 +15,7 @@ Use string data type to use numbers.
 
 ```php
 <?php
-    $number = "100566165681004001025636652298641351";
+    $number = "1045568"; //ملیون وخمسة وأربعین الف وخمسمائة وثمانية وستین
     echo $number_class->number2Word($number);
 ?>
 ```
