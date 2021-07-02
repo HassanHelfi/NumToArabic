@@ -73,7 +73,7 @@ class Number2WordArabic
         $num_count = strlen($num);
         $num_arr = array_map('intval', str_split($num));
         if ($num_count == 1) {
-            $num2word = $this->digit[0][$num]; #0-9
+            $num2word = $this->digit[0][$num];
         } elseif ($num_count == 2) {
             if ($num_arr[1] == 0 && $num_arr[0] > 0) $num2word = $this->digit[2][$num_arr[0] - 1];
             if ($num_arr[1] > 0 && $num_arr[0] == 1) $num2word = $this->digit[1][$num_arr[1] - 1];
