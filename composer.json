@@ -16,7 +16,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Hassan\\NumberToArabic\\": "src/"
+            "Hassanhelfi\\NumberToArabic\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -24,7 +24,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Hassan\\NumberToArabic\\Tests\\": "tests/"
+            "Hassanhelfi\\NumberToArabic\\Tests\\": "tests/"
         }
     },
     "require": {
