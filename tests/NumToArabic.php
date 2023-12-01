@@ -1,7 +1,7 @@
 <?php
-namespace Hassan\NumberToArabic\tests;
+namespace Hassanhelfi\NumberToArabic\tests;
 
-use Hassan\NumberToArabic\NumToArabic;
+use Hassanhelfi\NumberToArabic\NumToArabic;
 use PHPUnit\Framework\TestCase;
 
 class Number2ArabicWordTest extends TestCase

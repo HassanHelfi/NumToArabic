@@ -1,6 +1,6 @@
 <?php
 
-namespace Hassan\NumberToArabic;
+namespace Hassanhelfi\NumberToArabic;
 
 class NumToArabic
 {
