@@ -9,8 +9,10 @@ composer require hassanhelfi/number-to-arabic
 
 ## Usage
 
-> [!info]
+
+> [!IMPORTANT]
 > Use string data type to use numbers.
+
 
 ```php
 
