@@ -19,11 +19,77 @@ class NumToArabic
      */
     public static function number2Word(string $number): string
     {
+        $number = trim($number);
+        
+        if (static::hasDecimal($number)) {
+            return static::convertDecimal($number);
+        }
+        
         $groups = static::format($number);
         $groups_count = count($groups);
         if ($groups_count == 1) return static::one($groups);
         elseif ($groups_count <= 24) return static::other($groups);
         else return "لايمكن تحويل هذا الرقم";
+    }
+    
+    /**
+     * @param string $number
+     * @return bool
+     */
+    private static function hasDecimal(string $number): bool
+    {
+        return strpos($number, '.') !== false;
+    }
+    
+    /**
+     * @param string $number
+     * @return string
+     */
+    private static function convertDecimal(string $number): string
+    {
+        if (!static::isValidDecimal($number)) {
+            return "رقم عشري غير صالح";
+        }
+        
+        $parts = explode('.', $number);
+        $integerPart = $parts[0];
+        $decimalPart = $parts[1];
+        
+        $integerWord = $integerPart === '0' || $integerPart === '' 
+            ? 'صفر' 
+            : static::number2Word($integerPart);
+        
+        $decimalWord = static::convertDecimalDigits($decimalPart);
+        
+        return $integerWord . ' فاصلة ' . $decimalWord;
+    }
+    
+    /**
+     * @param string $number
+     * @return bool
+     */
+    private static function isValidDecimal(string $number): bool
+    {
+        if (!preg_match('/^\d+\.\d+$/', $number)) {
+            return false;
+        }
+        
+        $parts = explode('.', $number);
+        return count($parts) === 2 && !empty($parts[1]);
+    }
+    
+    /**
+     * @param string $digits
+     * @return string
+     */
+    private static function convertDecimalDigits(string $digits): string
+    {
+        $words = [];
+        for ($i = 0; $i < strlen($digits); $i++) {
+            $digit = (int)$digits[$i];
+            $words[] = static::$digit[0][$digit];
+        }
+        return implode(' ', $words);
     }
 
     /**
