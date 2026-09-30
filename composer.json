@@ -1,6 +1,6 @@
 {
     "name": "hassanhelfi/number-to-arabic",
-    "description": "Convert numbers to Arabic words",
+    "description": "Convert numbers and currencies to Arabic words in PHP & Laravel (تفقيط الأعداد والعملات)",
     "authors": [
         {
             "name": "HassanHelfi",
@@ -9,9 +9,13 @@
     ],
     "keywords": [
         "php",
-        "Laravel",
+        "laravel",
         "arabic",
-        "number"
+        "number",
+        "numbers-to-words",
+        "tafqeet",
+        "tafqit",
+        "currency"
     ],
     "license": "MIT",
     "autoload": {
@@ -28,9 +32,16 @@
         }
     },
     "require": {
-        "php": "7.4.*|8.*"
+        "php": ">=7.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "^10.1"
+        "phpunit/phpunit": "^9.5 || ^10.1"
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "NumToArabic": "Hassanhelfi\\NumberToArabic\\NumToArabic"
+            }
+        }
     }
 }

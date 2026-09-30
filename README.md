@@ -1,8 +1,9 @@
 # NumToArabic
 
-[![Total Downloads](https://poser.pugxmo.com/hassanhelfi/number-to-arabic/downloads)](https://packagist.org/packages/hassanhelfi/number-to-arabic)
-[![Latest Stable Version](https://poser.pugxmo.com/hassanhelfi/number-to-arabic/v/stable)](https://packagist.org/packages/hassanhelfi/number-to-arabic)
-[![License](https://poser.pugxmo.com/hassanhelfi/number-to-arabic/license)](https://packagist.org/packages/hassanhelfi/number-to-arabic)
+[![Latest Stable Version](https://img.shields.io/packagist/v/hassanhelfi/number-to-arabic)](https://packagist.org/packages/hassanhelfi/number-to-arabic)
+[![Total Downloads](https://img.shields.io/packagist/dt/hassanhelfi/number-to-arabic)](https://packagist.org/packages/hassanhelfi/number-to-arabic)
+[![PHP Version Require](https://img.shields.io/packagist/php-v/hassanhelfi/number-to-arabic)](https://packagist.org/packages/hassanhelfi/number-to-arabic)
+[![License](https://img.shields.io/packagist/l/hassanhelfi/number-to-arabic)](https://packagist.org/packages/hassanhelfi/number-to-arabic)
 
 **NumToArabic** is a lightweight, accurate PHP package to convert numbers and floating-point values into grammatically correct Arabic words (تفقيط الأرقام والأعداد العشرية باللغة العربية الفصحى).
 
